@@ -41,6 +41,7 @@ function love.load()
     love.keyboard.setKeyRepeat(false)
 
     core["logo"] = love.graphics.newImage("logo.png")
+    core["menu"] = love.graphics.newImage("menu.jpg")
     core["music"] = love.audio.newSource("song.mp3", 'stream')
 end
 
@@ -154,6 +155,7 @@ end
 
 function core.drawSceneMenu()
     love.graphics.setColor(1, 1, 1, 1)
+    love.graphics.draw(core.menu)
     love.graphics.draw(core.logo, 20, 20)
     love.graphics.setColor(1, 1, 1, 1)
     love.graphics.rectangle("fill", 0, 500, 800, 60)
